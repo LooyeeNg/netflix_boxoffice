@@ -81,7 +81,20 @@ for lab, row in netflix_movies_col_subset.iterrows():
 # Inspect the first 10 values in your list
 colors[0:10]
 
+# Set the figure style and initalize a new figure
+plt.style.use('fivethirtyeight')
+fig = plt.figure(figsize=(12,8))
 
+# Create a scatter plot of duration versus year
+plt.scatter(netflix_movies_col_subset['release_year'],netflix_movies_col_subset['duration'], c=colors)
+
+# Create a title and axis labels
+plt.xlabel("Release Year")
+plt.ylabel("Duration (min)")
+plt.title("Movie Duration by Year of Release")
+
+# Show the plot
+plt.show()
 
 
 
